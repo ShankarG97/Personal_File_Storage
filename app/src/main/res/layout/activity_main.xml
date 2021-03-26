@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="#F5F5F5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/lbl_squash"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center"
+            android:rotation="270"
+            android:text="Squash "
+            android:textColor="@color/pink"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/lbl_badmtn"
+            app:layout_constraintEnd_toEndOf="@+id/lbl_badmtn"
+            app:layout_constraintHorizontal_bias="0.526"
+            app:layout_constraintStart_toStartOf="@+id/lbl_badmtn" />
+
+        <TextView
+            android:id="@+id/lbl_badmtn"
+            android:layout_width="90dp"
+            android:layout_height="110dp"
+            android:fontFamily="@font/rubik_bold_italic"
+            android:gravity="center"
+            android:rotation="270"
+            android:text="Badminton"
+            android:textColor="@color/pink"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/lbl_tennis"
+            app:layout_constraintEnd_toEndOf="@+id/lbl_tennis"
+            app:layout_constraintHorizontal_bias="0.526"
+            app:layout_constraintStart_toStartOf="@+id/lbl_tennis" />
+
+        <ImageView
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_search" />
+
+        <TextView
+            android:id="@+id/lbl_tennis"
+            android:layout_width="60dp"
+            android:layout_height="110dp"
+            android:layout_marginBottom="80dp"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center"
+            android:rotation="270"
+            android:text="Tennis "
+            android:textColor="@color/pink"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_search"
+            app:layout_constraintEnd_toEndOf="@+id/btn_search"
+            app:layout_constraintStart_toStartOf="@+id/btn_search" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/lbl_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Hello User"
+        android:textSize="24sp"
+        android:fontFamily="@font/rubik_bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_wlcm_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let's gear up with some equipment"
+        android:textSize="12sp"
+        android:fontFamily="@font/rubik"
+        app:layout_constraintStart_toStartOf="@+id/lbl_user"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_user" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/profile_avatar" />
+
+    <ImageView
+        android:id="@+id/btn_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_wlcm_text"
+        app:srcCompat="@drawable/ic_filter" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cat_recycle_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_filter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_filter"
+        app:layout_constraintTop_toTopOf="@+id/btn_filter" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/productView"
+        android:layout_width="0dp"
+        android:layout_height="490dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btn_filter"
+        app:layout_constraintTop_toBottomOf="@+id/cat_recycle_view"
+        app:layout_constraintVertical_bias="0" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="Your Cart"
+        android:layout_margin="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/productView"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/productView"
+        android:fontFamily="@font/rubik_medium"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:padding="8dp"
+        android:paddingEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:drawableRight="@drawable/ic_cart"
+        android:background="@drawable/cart_bg"
+        android:textColor="@color/white"
+        android:id="@+id/btn_addCart"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

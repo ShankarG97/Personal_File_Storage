@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentActivity"
+    android:background="@color/pink">
+
+    <ImageView
+        android:id="@+id/btn_backpress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="0dp"
+        android:layout_height="450dp"
+        android:background="@drawable/detail_page_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/card_number"
+            android:layout_width="0dp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/edittext_bg"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent=".8"
+            app:layout_constraintVertical_bias=".25"
+            app:layout_constraintHorizontal_bias=".5"
+            android:hint="Card Number"
+            android:inputType="number"
+            android:maxLength="16"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"/>
+
+        <EditText
+            android:id="@+id/exp_date"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:hint="Exp. Date"
+            android:paddingLeft="20dp"
+            android:inputType="text"
+            android:maxLength="5"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/black"
+            app:layout_constraintVertical_bias="0"
+            android:layout_marginTop="20dp"
+            app:layout_constraintHorizontal_bias=".15"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_number"
+            android:background="@drawable/edittext_bg"/>
+
+        <EditText
+            android:id="@+id/card_cvv"
+            android:layout_width="80dp"
+            android:hint="cvv"
+            app:layout_constraintHorizontal_bias="1"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:inputType="numberPassword"
+            android:maxLength="3"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_bg"
+            app:layout_constraintBottom_toBottomOf="@+id/exp_date"
+            app:layout_constraintEnd_toEndOf="@+id/card_number"
+            app:layout_constraintStart_toEndOf="@+id/exp_date"
+            app:layout_constraintTop_toTopOf="@+id/exp_date" />
+
+        <EditText
+            android:id="@+id/card_name"
+            android:layout_width="0dp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/card_number"
+            app:layout_constraintStart_toStartOf="@+id/card_number"
+            app:layout_constraintTop_toBottomOf="@+id/exp_date"
+            app:layout_constraintWidth_percent=".8"
+            app:layout_constraintVertical_bias=".2"
+            app:layout_constraintHorizontal_bias=".5"
+            android:hint="Card Holder Name"
+            android:inputType="text"
+            android:maxLength="16"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_margin="5dp"
+            android:text="Pay Now"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/card_name"
+            app:layout_constraintStart_toStartOf="@+id/card_name"
+            app:layout_constraintTop_toBottomOf="@+id/card_name"
+            android:fontFamily="@font/rubik_medium"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:background="@drawable/cart_bg"
+            android:textColor="@color/white"
+            android:id="@+id/btn_pay"/>
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:fontFamily="@font/rubik_medium"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/card_number"
+            app:layout_constraintEnd_toEndOf="@+id/card_number"
+            app:layout_constraintStart_toStartOf="@+id/card_number"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/card_purple" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

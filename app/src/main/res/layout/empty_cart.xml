@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/info_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_bold_italic"
+        android:text="Oops! \n Your cart is Empty. Click Shop now"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_anim"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/info_msg"
+        app:layout_constraintStart_toStartOf="@+id/info_msg"
+        app:layout_constraintTop_toBottomOf="@+id/info_msg"
+        app:lottie_autoPlay="true"
+        app:layout_constraintVertical_bias="0.2"
+        app:lottie_rawRes="@raw/empty_cart" />
+
+    <Button
+        android:id="@+id/btn_home"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/cart_bg"
+        android:fontFamily="@font/rubik_medium"
+        android:text="Shop Now"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/info_msg"
+        app:layout_constraintStart_toStartOf="@+id/info_msg"
+        app:layout_constraintTop_toBottomOf="@+id/lottie_anim" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
